@@ -1,0 +1,12 @@
+# Defensive — the repo ships no build step today, but tools run here.
+node_modules/
+dist/
+.env
+.env.*
+*.log
+.DS_Store
+
+# Scratch bundles authored during a session belong in the library PR,
+# not in this repo.
+/blog/
+/blogs/
