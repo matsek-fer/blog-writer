@@ -1,10 +1,12 @@
 {
   "name": "blog-writer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Guided authoring of forest-ready expository blogs for the MatSek library: interview, research over existing bundles, one-concept sections with checkpoints, validated bundle output, optional PR submission.",
   "author": {
     "name": "Matematička sekcija FER",
     "url": "https://github.com/matsek-fer"
   },
-  "skills": ["./skills/blog-writer"]
+  "skills": [
+    "./skills/blog-writer"
+  ]
 }
