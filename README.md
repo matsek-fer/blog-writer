@@ -1,45 +1,48 @@
 # blog-writer
 
-Alat Matematičke sekcije FER za pisanje **blogova za knjižnicu**: vodi te
-od ideje do gotovog, validiranog bundlea — intervju o temi i publici,
-istraživanje postojećih materijala, struktura po odjeljcima (svaki uči
-točno jedan koncept), checkpointi, engleska anotacija za pretraživanje i
-tutor-stub za nastavak učenja u svom tutoru.
+The FER Mathematics Section's tool for writing **blogs for the library**:
+it takes you from an idea to a finished, validated bundle — an interview
+about the topic and the audience, research of the existing material, a
+structure by sections (each teaching exactly one concept), checkpoints, an
+English annotation for search, and a tutor stub so a reader can continue
+learning in their own tutor.
 
-## Instalacija
+## Installation
 
-Dvije naredbe u Claude Codeu:
+Two commands in Claude Code:
 
 ```
 /plugin marketplace add matsek-fer/plugins
 /plugin install blog-writer@matsek
 ```
 
-Nakon toga samo reci da želiš napisati blog za knjižnicu — vještina se
-aktivira sama. Ažuriranja stižu automatski kroz marketplace.
+After that, just say you want to write a blog for the library — the skill
+activates itself. Updates arrive automatically through the marketplace.
 
-## Kako se uklapa u ekosustav
+## Where it fits in the ecosystem
 
-| Alat | Uloga |
+| Tool | Role |
 |---|---|
-| [library](https://github.com/matsek-fer/library) | Zajednička knjižnica bundleova (zadaci, dokazi, blogovi) — **odredište** onoga što blog-writer proizvede. Objavljena na <https://matsek-fer.github.io/library/>. |
-| **blog-writer** (ovaj repo) | Autorski protokol: piše blog kao bundle po [spec-u](https://github.com/matsek-fer/spec), validira ga do nule grešaka i vodi PR prema knjižnici. |
-| tutor (`AI_instructor`) | Svaki blog nosi `tutor-stub.json`: preuzmeš ga u svoj vault i `/tutor` nastavlja točno ondje gdje je blog stao. |
-| problemset | Pretraživanje knjižnice — blog-writer ga koristi obrnuto: pronalazi zadatke vrijedne linkanja iz odjeljaka bloga. |
+| [library](https://github.com/matsek-fer/library) | The shared library of bundles (problems, proofs, blogs) — the **destination** of what blog-writer produces. Published at <https://matsek-fer.github.io/library/>. |
+| **blog-writer** (this repo) | The authoring protocol: writes the blog as a bundle per the [spec](https://github.com/matsek-fer/spec), validates it to zero errors and guides the PR to the library. |
+| tutor (`AI_instructor`) | Every blog carries a `tutor-stub.json`: drop it into your vault and `/tutor` continues exactly where the blog stopped. |
+| problemset | Library search — blog-writer uses it in reverse: it finds problems worth linking from the blog's sections. |
 
 ## Forest-readiness
 
-Blogovi se pišu kao **budući objekti Knowledge Foresta**: svaki odjeljak
-je samostalno čitljiv, nosi jedan koncept i klasificiran je taksonom
-(`exposition`, `example`, `intuition`, `motivation`, `connection`) u
-`x_forest` polju frontmattera. Normativna definicija konvencije:
-[`docs/forest-readiness.md`](docs/forest-readiness.md) (na engleskom —
-model-facing dokument, kandidat za promociju u spec format v2).
+Blogs are written as **future objects of the Knowledge Forest**: every
+section is independently readable, carries one concept and is classified
+by a taxon (`exposition`, `example`, `intuition`, `motivation`,
+`connection`) in the `x_forest` frontmatter field. The normative definition
+of the convention: [`docs/forest-readiness.md`](docs/forest-readiness.md)
+(a model-facing document, promoted into the vault format in
+[`reader`](https://github.com/matsek-fer/reader)).
 
-## Napomena o provenijenciji
+## A note on provenance
 
-Sadržaj koji je model skicirao nosi `provenance: ai-assisted` i **čeka
-pregled maintainera** prije nego što se pojavi u knjižnici. Prepisivanje
-ili blisko parafraziranje udžbenika, natjecateljskih zadataka i
-math.StackExchangea zabranjeno je politikom
-[`spec/policies/provenance.md`](https://github.com/matsek-fer/spec/blob/main/policies/provenance.md).
+Content the model drafted carries `provenance: ai-assisted` and **awaits a
+maintainer's review** before it appears in the library. Copying or closely
+paraphrasing textbooks, competition problems and math.StackExchange is
+forbidden by the
+[`spec/policies/provenance.md`](https://github.com/matsek-fer/spec/blob/main/policies/provenance.md)
+policy.
